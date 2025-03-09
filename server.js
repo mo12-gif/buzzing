@@ -12,6 +12,9 @@ const io = new Server(server, {
   }
 });
 
+const cors = require("cors");
+app.use(cors({ origin: "https://buzzing-front.onrender.com" }));
+
 let rooms = {};
 
 io.on("connection", (socket) => {
